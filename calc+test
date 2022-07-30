@@ -1,0 +1,91 @@
+public class Calc {
+    int div(int a, int b) {
+        if (b != 0)
+            return a / b;
+        else
+            return -1;
+
+    }
+
+    int sum(int a, int b) {
+        return a + b;
+
+    }
+
+    int multi(int a, int b) {
+        return a * b;
+    }
+
+    int sub(int a, int b) {
+        return a - b;
+    }
+
+    int mod(int a, int b) {
+
+return a%b;
+
+    }
+}
+import org.junit.Assert;
+import org.junit.Test;
+
+public class CalcTest {
+
+     Calc c = new Calc();
+    @Test
+    public void  test_div_p() {
+        int inputA = 8;
+        int inputB = 2;
+        int expected = 4;
+        int actual = c.div(inputA, inputB);
+
+        Assert.assertEquals(expected, actual);
+    }
+
+
+        @Test
+        public void  test_div_n(){
+            int inputA = 8;
+            int inputB=0;
+            int expected = -1;
+            int actual= c.div(inputA,inputB);
+
+            Assert.assertEquals(expected,actual);
+
+    }
+
+
+    @Test
+    public void test_sum() {
+        int inputA = 8;
+        int inputB = 2;
+        int expected = 10;
+        int actual = c.sum(inputA, inputB);
+        Assert.assertEquals(expected, actual);
+    }
+    @Test
+    public void test_sub() {
+        int inputA = 8;
+        int inputB = 7;
+        int expected = 1;
+        int actual = c.sub(inputA, inputB);
+        Assert.assertEquals(expected, actual);
+    }
+    @Test
+    public void test_multi() {
+        int inputA = 8;
+        int inputB = -5;
+        int expected = -40;
+        int actual = c.multi(inputA, inputB);
+        Assert.assertEquals(expected, actual);
+    }
+    @Test
+    public void test_mod() {
+        int inputA = 8;
+        int inputB = 3;
+        int expected = 2;
+        int actual = c.mod(inputA, inputB);
+        Assert.assertEquals(expected, actual);
+    }
+
+}
